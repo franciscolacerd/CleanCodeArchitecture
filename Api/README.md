@@ -2,6 +2,7 @@
 
 # Tree Diagram
 
+```bash
 ├── Domain
 │   └── User.cs                    <-- Domain model
 │
@@ -25,6 +26,7 @@
 │
 └── Tests
     └── (unit tests, integration tests, etc.)
+```
 
 # Clean Architecture:
 Clean Architecture consists of concentric layers, each representing a different level of abstraction. 
