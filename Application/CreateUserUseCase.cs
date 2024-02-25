@@ -1,13 +1,14 @@
-﻿using Application;
+﻿using Application.Adapters;
 using Application.Ports;
+using Domain;
 
-namespace Domain
+namespace Application
 {
     public class CreateUserUseCase : ICreateUserUseCase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserRepositoryAdapter _userRepository;
 
-        public CreateUserUseCase(IUserRepository userRepository)
+        public CreateUserUseCase(IUserRepositoryAdapter userRepository)
         {
             _userRepository = userRepository;
         }

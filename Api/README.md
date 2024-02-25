@@ -10,13 +10,12 @@
 │   ├── Ports
 │   │   ├── IUserRepository.cs     <-- Port
 │   │   └── ICreateUserUseCase.cs  <-- Port
+│   ├── Adapters
+│   │   ├── IUserRepositoryAdapter.cs     <-- IUserRepository Adapter
+│   │   └── UserRepository.cs             <-- Implementation of IUserRepositoryAdapter
 │   ├── CreateUserRequest.cs
 │   ├── CreateUserResponse.cs
 │   └── CreateUserUseCase.cs        <-- Implementation of ICreateUserUseCase
-│
-├── Adapters
-│   ├── IUserRepositoryAdapter.cs   <-- IUserRepository Adapter
-│   └── UserRepository.cs           <-- Implementation of IUserRepositoryAdapter
 │
 ├── Infrastructure
 │   └── DatabaseContext.cs
@@ -51,7 +50,7 @@ Let's create a simple example to illustrate the project organization. Consider a
 ## Domain (Entities and Use Cases):
 
 - **Entities:**
-  - **UserEntity.cs:** Defines the user entity.
+  - **User.cs:** Defines the user entity.
 
 ## Application (Boundary Interfaces):
 
@@ -59,18 +58,16 @@ Let's create a simple example to illustrate the project organization. Consider a
   - **IUserRepository.cs:** Defines the interface for the user repository.
   - **ICreateUserUseCase.cs:** Defines the interface for creating a user.
 
+- **UserRepositoryAdapter:**
+  - **IUserRepositoryAdapter.cs:** IUserRepository Adapter
+  - **UserRepository.cs:** Implements IUserRepository interacting with the database.
+
 - **Request and Response Models:**
   - **CreateUserRequest.cs:** Request model for creating a user.
   - **CreateUserResponse.cs:** Response model for creating a user.
 
   - **Use Cases:**
   - **CreateUserUseCase.cs:** Implementation of ICreateUserUseCase
-
-## Adapters (Concrete Implementations):
-
-- **UserRepositoryAdapter:**
-  - **IUserRepositoryAdapter.cs:** IUserRepository Adapter
-  - **UserRepository.cs:** Implements IUserRepository interacting with the database.
 
 ## Infrastructure (Implementation Details):
 
