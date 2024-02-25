@@ -36,9 +36,9 @@ Entities: Represent business objects containing basic business logic.
 
 Use Cases: Contain application-specific logic and coordinate the execution of tasks.
 
-Boundary Interfaces: Interfaces with the external world, such as controllers, services, and gateways.
+Ports: Interfaces defining application-specific services or functionalities.
 
-Adapters: Concrete implementations of boundary interfaces. They adapt the implementation details to the interfaces defined in the inner layers.
+Adapters: Concrete implementations of boundary interfaces (Ports). They adapt the implementation details to the interfaces defined in the inner layers.
 
 Ports and Adapters:
 "Ports" are the interfaces defining application-specific services or functionalities, while "Adapters" are the concrete implementations of these interfaces.
